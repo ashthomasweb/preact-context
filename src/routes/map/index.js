@@ -118,7 +118,7 @@ const MapPage = () => {
 
   let coordBoxStyle = {
     height: 250,
-    width: 420,
+    width: 440,
     backgroundColor: '#252832',
     position: 'absolute',
     bottom: 25,

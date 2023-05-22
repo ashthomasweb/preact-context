@@ -9,6 +9,18 @@
 	background: #fafafa;
 }
 
+.ol-zoom {
+	display: none!important;
+}
+
+.ol-rotate {
+	display: none!important;
+}
+
+.ol-attribution{
+	display: none!important;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		color: #fff;
