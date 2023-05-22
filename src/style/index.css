@@ -36,3 +36,73 @@ body {
 		margin: 0 2rem;
 	}
 }
+
+
+.outer-container {
+	display: inline-block;
+	position: relative;
+	top: 15px;
+	left: 15px;
+	background-color: #3180ef;
+	height: 34px;
+	width: 100px;
+	padding: 3px 2px 3px 5px;
+	border-radius: 34px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+
+
+.coord-box input {
+	font-size: 20px;
+	padding-left: 8px;
+}
+
+.coord-button {
+	background-color: #3d3d3d;
+	transition: background-color cubic-bezier(0.445, 0.05, 0.55, 0.95) .1s, width cubic-bezier(0.445, 0.05, 0.55, 0.95) .1s;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	width: 220px;
+}
+
+.coord-button:hover {
+	background-color: #4373d4;
+	width: 230px;
+}
+
+.slider-lon {
+	background-color: #222;
+	height: 30px;
+	width: 30px;
+	position: relative;
+	left: 0;
+	top: 2px;
+	transition: left cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s, background-color cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+	border-radius: 34px;
+}
+
+.slider-lat {
+	background-color: #222;
+	height: 30px;
+	width: 30px;
+	position: relative;
+	left: 0;
+	top: 2px;
+	transition: left cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s, background-color cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+	border-radius: 34px;
+}
+
+.slider-lon.true {
+	left: 66px;
+	background-color: #1f485e;
+	box-shadow: 0px 0px 100px 100px #92bfe3;
+}
+
+.slider-lat.true {
+	left: 66px;
+	background-color: #1f485e;
+	box-shadow: 0px 0px 100px 100px #92bfe3;
+}
