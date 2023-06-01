@@ -79,13 +79,15 @@ const MapPage = () => {
       const lon = lonInput.current.value
       const lat = latInput.current.value 
       // BUG: Unknown why 'sliderPos' can't be turned into a Boolean
-      // without losing the ability to update upon toggle. Explicit
-      // check for string required at this time.
+      // without losing the ability to update upon toggle. Additionally,
+      // using a ternary operator to set the value of 'lonRose/latRose' 
+      // causes malfunction in user controls. Explicit check for 
+      // string required at this time.
       let westSliderPos = westSliderRef.current.dataset.iswest
       let northSliderPos = northSliderRef.current.dataset.isnorth
 
-      let lonRose
-      let latRose
+      let lonRose = ''
+      let latRose = ''
 
       if (westSliderPos === 'true') {
         lonRose = '-'
