@@ -1,7 +1,14 @@
 import { h } from 'preact'
+import { useReducer } from 'preact/hooks'
 import style from './style.css'
+import Modal from '../../components/modal'
+import { GlobalReducer, initialGlobalState } from '../../context/global/GlobalReducer'
+import { GlobalContext } from '../../context/global/GlobalState'
 
 const Home = () => {
+
+  const [state, dispatch] = useReducer(GlobalReducer, initialGlobalState )
+
   return (
     <div class={style.home}>
       <a href='https://preactjs.com'>
@@ -19,6 +26,11 @@ const Home = () => {
           library. Please use navigation at top to explore.
         </p>
       </section>
+    <GlobalContext.Provider value={{ state, dispatch }} >
+
+      <Modal />
+    </GlobalContext.Provider>
+
     </div>
   )
 }
